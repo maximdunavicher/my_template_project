@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+{% if all_appointments %}
+    <p>{{ all_appointments }}</p>
+    <ul>
+    {% for appointment in all_appointments %}
+        <li><a href="/doctors_web_site/">{{ appointment.person.name }} {{ appointment.treatment_area }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No appointments are available.</p>
+{% endif %}
+
+</body>
+</html>
