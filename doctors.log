@@ -1,0 +1,189 @@
+[12/Sep/2015 19:53:33] DEBUG [django.db.backends:89] (0.014) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[12/Sep/2015 19:53:33] DEBUG [django.db.backends:89] (0.004) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[12/Sep/2015 19:53:40] ERROR [django.request:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/maxim/PycharmProjects/untitled/doctors/urls.py", line 21, in <module>
+    url(r'^doctors_web_site/', include('doctors_web_site.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/maxim/PycharmProjects/untitled/doctors_web_site/urls.py", line 4, in <module>
+    from . import views
+  File "/home/maxim/PycharmProjects/untitled/doctors_web_site/views.py", line 44
+    user_profile = UserProfile(date_of_birth=birthday_date, phone_number, registration_date=timezone.now())
+SyntaxError: non-keyword arg after keyword arg
+[12/Sep/2015 19:53:40] ERROR [django.request:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/maxim/PycharmProjects/untitled/doctors/urls.py", line 21, in <module>
+    url(r'^doctors_web_site/', include('doctors_web_site.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/maxim/PycharmProjects/untitled/doctors_web_site/urls.py", line 4, in <module>
+    from . import views
+  File "/home/maxim/PycharmProjects/untitled/doctors_web_site/views.py", line 44
+    user_profile = UserProfile(date_of_birth=birthday_date, phone_number, registration_date=timezone.now())
+SyntaxError: non-keyword arg after keyword arg
+[12/Sep/2015 19:53:48] ERROR [django.request:256] Internal Server Error: /doctors_web_site/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/maxim/PycharmProjects/untitled/doctors/urls.py", line 21, in <module>
+    url(r'^doctors_web_site/', include('doctors_web_site.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/maxim/PycharmProjects/untitled/doctors_web_site/urls.py", line 4, in <module>
+    from . import views
+  File "/home/maxim/PycharmProjects/untitled/doctors_web_site/views.py", line 44
+    user_profile = UserProfile(date_of_birth=birthday_date, phone_number, registration_date=timezone.now())
+SyntaxError: non-keyword arg after keyword arg
+[12/Sep/2015 19:53:54] ERROR [django.request:256] Internal Server Error: /doctors_web_site/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/maxim/PycharmProjects/untitled/doctors/urls.py", line 21, in <module>
+    url(r'^doctors_web_site/', include('doctors_web_site.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/maxim/PycharmProjects/untitled/doctors_web_site/urls.py", line 4, in <module>
+    from . import views
+  File "/home/maxim/PycharmProjects/untitled/doctors_web_site/views.py", line 44
+    user_profile = UserProfile(date_of_birth=birthday_date, phone_number, registration_date=timezone.now())
+SyntaxError: non-keyword arg after keyword arg
+[12/Sep/2015 20:11:37] ERROR [django.request:256] Internal Server Error: /doctors_web_site/login_page/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maxim/PycharmProjects/untitled/doctors_web_site/views.py", line 86, in login_page
+    return signup_view(request)
+  File "/home/maxim/PycharmProjects/untitled/doctors_web_site/views.py", line 38, in signup_view
+    phone = request.POST['phone']
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'phone'"
+[12/Sep/2015 20:13:03] DEBUG [django.db.backends:89] (0.016) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$AvQxcacTJZNd$VSzOrtBDdc7sRMK4usUqi/9PQMIH1GyQqduSMfxn4wc=', NULL, false, 'ronit1', 'ronitka', 'goldental', 'ronit1@gmial.com', false, true, '2015-09-12T17:13:03.095446+00:00'::timestamptz) RETURNING "auth_user"."id"; args=(u'pbkdf2_sha256$20000$AvQxcacTJZNd$VSzOrtBDdc7sRMK4usUqi/9PQMIH1GyQqduSMfxn4wc=', None, False, u'ronit1', u'ronitka', u'goldental', u'ronit1@gmial.com', False, True, datetime.datetime(2015, 9, 12, 17, 13, 3, 95446, tzinfo=<UTC>))
+[12/Sep/2015 20:13:03] ERROR [django.request:256] Internal Server Error: /doctors_web_site/login_page/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view doctors_web_site.views.login_page didn't return an HttpResponse object. It returned None instead.
+[12/Sep/2015 20:14:46] DEBUG [django.db.backends:89] (0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[12/Sep/2015 20:14:46] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[12/Sep/2015 20:17:48] DEBUG [django.db.backends:89] (0.003) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$GcevgIniTkWh$fz0wk6hG0XaYmOU9gH2lAt8k3LT/hiQtq8D/vUABtLo=', NULL, false, 'ronit1', 'ronitka', 'goldental', 'ronit1@gmial.com', false, true, '2015-09-12T17:17:48.696671+00:00'::timestamptz) RETURNING "auth_user"."id"; args=(u'pbkdf2_sha256$20000$GcevgIniTkWh$fz0wk6hG0XaYmOU9gH2lAt8k3LT/hiQtq8D/vUABtLo=', None, False, u'ronit1', u'ronitka', u'goldental', u'ronit1@gmial.com', False, True, datetime.datetime(2015, 9, 12, 17, 17, 48, 696671, tzinfo=<UTC>))
+[12/Sep/2015 20:17:48] DEBUG [doctors_web_site.views:68] Failed to create the following user:
+Username: ronit1
+ Email: ronit1@gmial.com
+ Password: ronitronit
+, Name: ronitka
+ Last_name:goldental
+ Birthday:09/24/1991
+[12/Sep/2015 20:17:48] ERROR [doctors_web_site.views:70] duplicate key value violates unique constraint "auth_user_username_key"
+DETAIL:  Key (username)=(ronit1) already exists.
+
+[12/Sep/2015 20:20:03] DEBUG [django.db.backends:89] (0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[12/Sep/2015 20:20:03] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[12/Sep/2015 20:23:19] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$VShiTWkZnFIn$KuZt49WZfxaur8BuiahTwi3vWE7hAqUEgYQXGVQ5Ljw=', NULL, false, 'ronit1', 'ronitka', 'goldental', 'ronit1@gmial.com', false, true, '2015-09-12T17:23:19.246039+00:00'::timestamptz) RETURNING "auth_user"."id"; args=(u'pbkdf2_sha256$20000$VShiTWkZnFIn$KuZt49WZfxaur8BuiahTwi3vWE7hAqUEgYQXGVQ5Ljw=', None, False, u'ronit1', u'ronitka', u'goldental', u'ronit1@gmial.com', False, True, datetime.datetime(2015, 9, 12, 17, 23, 19, 246039, tzinfo=<UTC>))
+[12/Sep/2015 20:23:19] DEBUG [doctors_web_site.views:69] Failed to create the following user:
+Username: ronit1
+ Email: ronit1@gmial.com
+ Password: ronitronit
+, Name: ronitka
+ Last_name:goldental
+ Birthday:09/24/1991
+[12/Sep/2015 20:23:19] ERROR [doctors_web_site.views:71] duplicate key value violates unique constraint "auth_user_username_key"
+DETAIL:  Key (username)=(ronit1) already exists.
+
+[12/Sep/2015 20:23:19] WARNING [django.request:170] Not Found: /doctors_web_site/login_page/
+[12/Sep/2015 20:24:53] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$nZf0XBPLTuAy$/J0qP992VcXK4F3mE2vHuTZNyWsUSKpZYyPEVr3Vga0=', NULL, false, 'ronitsusernametest', 'ronitka', 'ronitkalastname', 'ronitsrandommail@gmail.com', false, true, '2015-09-12T17:24:53.697285+00:00'::timestamptz) RETURNING "auth_user"."id"; args=(u'pbkdf2_sha256$20000$nZf0XBPLTuAy$/J0qP992VcXK4F3mE2vHuTZNyWsUSKpZYyPEVr3Vga0=', None, False, u'ronitsusernametest', u'ronitka', u'ronitkalastname', u'ronitsrandommail@gmail.com', False, True, datetime.datetime(2015, 9, 12, 17, 24, 53, 697285, tzinfo=<UTC>))
+[12/Sep/2015 20:24:53] DEBUG [doctors_web_site.views:69] Failed to create the following user:
+Username: ronitsusernametest
+ Email: ronitsrandommail@gmail.com
+ Password: ronitronit
+, Name: ronitka
+ Last_name:ronitkalastname
+ Birthday:09/20/1991
+[12/Sep/2015 20:24:53] ERROR [doctors_web_site.views:71] [u"'09/20/1991' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format."]
+[12/Sep/2015 20:24:53] WARNING [django.request:170] Not Found: /doctors_web_site/login_page/
+[12/Sep/2015 20:29:32] WARNING [django.request:170] Not Found: /favicon.ico
+[12/Sep/2015 20:31:04] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$Quad5m0L2JpK$uxWO8+i27M6kr95g/lNQ7457+qCOhpKJUFztUTvoSXk=', NULL, false, 'soterandomusername', 'somerandomname', 'somerandomlastname', 'maximdunavisads@gmail.com', false, true, '2015-09-12T17:31:04.561976+00:00'::timestamptz) RETURNING "auth_user"."id"; args=(u'pbkdf2_sha256$20000$Quad5m0L2JpK$uxWO8+i27M6kr95g/lNQ7457+qCOhpKJUFztUTvoSXk=', None, False, u'soterandomusername', u'somerandomname', u'somerandomlastname', u'maximdunavisads@gmail.com', False, True, datetime.datetime(2015, 9, 12, 17, 31, 4, 561976, tzinfo=<UTC>))
+[12/Sep/2015 20:31:04] DEBUG [django.db.backends:89] (0.004) INSERT INTO "doctors_web_site_userprofile" ("user_id", "date_of_birth", "phone_number", "registration_date") VALUES (8, '1991-09-12T00:00:00+02:00'::timestamptz, '0545687856', '2015-09-12T17:31:04.633399+00:00'::timestamptz) RETURNING "doctors_web_site_userprofile"."id"; args=(8, datetime.datetime(1991, 9, 12, 0, 0, tzinfo=<django.utils.timezone.LocalTimezone object at 0x7ffb11c14e90>), u'0545687856', datetime.datetime(2015, 9, 12, 17, 31, 4, 633399, tzinfo=<UTC>))
+[12/Sep/2015 20:31:04] DEBUG [doctors_web_site.views:64] User created with the following data:
+Username: soterandomusername
+ Email: maximdunavisads@gmail.com
+ Password: testtest
+, Name: somerandomname
+ Last_name:somerandomlastname
+ Birthday:1991-09-12
+[12/Sep/2015 20:31:04] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'soterandomusername'; args=(u'soterandomusername',)
+[12/Sep/2015 20:31:04] DEBUG [django.db.backends:89] (0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '6br5ww8p88nv45838dmcauvv4ijvz0yb' AND "django_session"."expire_date" > '2015-09-12T17:31:04.704277+00:00'::timestamptz); args=('6br5ww8p88nv45838dmcauvv4ijvz0yb', datetime.datetime(2015, 9, 12, 17, 31, 4, 704277, tzinfo=<UTC>))
+[12/Sep/2015 20:31:04] DEBUG [django.db.backends:89] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = '6br5ww8p88nv45838dmcauvv4ijvz0yb'; args=('6br5ww8p88nv45838dmcauvv4ijvz0yb',)
+[12/Sep/2015 20:31:04] DEBUG [django.db.backends:89] (0.002) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('6br5ww8p88nv45838dmcauvv4ijvz0yb'); args=(u'6br5ww8p88nv45838dmcauvv4ijvz0yb',)
+[12/Sep/2015 20:31:04] DEBUG [django.db.backends:89] (0.001) UPDATE "auth_user" SET "last_login" = '2015-09-12T17:31:04.713580+00:00'::timestamptz WHERE "auth_user"."id" = 8; args=(datetime.datetime(2015, 9, 12, 17, 31, 4, 713580, tzinfo=<UTC>), 8)
+[12/Sep/2015 20:31:04] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'y8217brmx06nkfkm5wbp1l20ztpw5krf' LIMIT 1; args=(u'y8217brmx06nkfkm5wbp1l20ztpw5krf',)
+[12/Sep/2015 20:31:04] DEBUG [django.db.backends:89] (0.001) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") VALUES ('y8217brmx06nkfkm5wbp1l20ztpw5krf', 'ZDQ5MmI3ZDQyMTRiZjFkZjljMmQ5ZDZhOWVhOTZhNTYzMDliYTc5ZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjJiZTkxZGQ1ZjgwNTlhMDY1YzFlY2RhNjBjMTFiYjY2ZTZkZjIxNTkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI4In0=', '2015-09-26T17:31:04.720770+00:00'::timestamptz); args=(u'y8217brmx06nkfkm5wbp1l20ztpw5krf', u'ZDQ5MmI3ZDQyMTRiZjFkZjljMmQ5ZDZhOWVhOTZhNTYzMDliYTc5ZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjJiZTkxZGQ1ZjgwNTlhMDY1YzFlY2RhNjBjMTFiYjY2ZTZkZjIxNTkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI4In0=', datetime.datetime(2015, 9, 26, 17, 31, 4, 720770, tzinfo=<UTC>))

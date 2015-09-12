@@ -1210,3 +1210,17 @@ span.element_2{
     content: 'max 400';
   }
 }
+
+input[type="text"]:valid {
+    color: green;
+}
+
+input[type="text"]:valid ~ .input-validation::before {
+    content: "✓";
+    color: green;
+}
+
+input[type="text"]:invalid {
+    color: red;
+}
+

@@ -206,29 +206,34 @@
                             </span>
                         <div class="txt">
 
+                        <div class="txt">
+                            <div class="input">
+                          <label for="phone">Phone</label>
+                          <input type="text" name="phone"  pattern="[0-9]{5,16}" placeholder="+972543172021" />
+                        </div>
 
-                            <label for="birthday"> Birthday date</label>
+                        <label for="birthday"> Birthday date</label>
 
 
-                                <script type="text/javascript">
-                                    var datefield=document.createElement("input")
-                                    datefield.setAttribute("type", "date")
-                                    if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
-                                        document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
-                                        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
-                                        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
-                                    }
-                                </script>
-
-                                <script>
-                                if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
-                                    jQuery(function($){ //on document.ready
-                                        $('#birthday').datepicker();
-                                    })
+                            <script type="text/javascript">
+                                var datefield=document.createElement("input")
+                                datefield.setAttribute("type", "date")
+                                if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+                                    document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+                                    document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+                                    document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
                                 }
-                                </script>
+                            </script>
 
-                                <input type="date" id="birthday" name="birthday" size="20" placeholder="09/20/1991"/>
+                            <script>
+                            if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+                                jQuery(function($){ //on document.ready
+                                    $('#birthday').datepicker();
+                                })
+                            }
+                            </script>
+
+                            <input type="date" id="birthday" name="birthday" size="20" placeholder="09/20/1991"/>
 
                         <div class="txt">
                           <label for="email">Email</label>
@@ -253,6 +258,7 @@
                                  class="button"/>
                         </div>
                        </div>
+                            </div>
                       </form>
 
 
